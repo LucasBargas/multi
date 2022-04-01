@@ -3,7 +3,7 @@ import { BsXLg, BsList } from 'react-icons/bs';
 import * as S from './Nav.styles';
 
 const Nav = () => {
-  const [mobile, setMobile] = useState(true);
+  const [mobile, setMobile] = useState(false);
 
   const handleOutsideClick = ({ target, currentTarget }) => {
     if (target === currentTarget) setMobile(false);
