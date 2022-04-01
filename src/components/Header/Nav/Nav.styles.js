@@ -1,5 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+const test = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const NavContainer = styled.nav`
   @media (max-width: 768px) {
@@ -14,6 +22,7 @@ export const NavContainer = styled.nav`
     height: 100vh;
     background: rgba(4, 12, 21, .9);
     padding: 0 1rem 1rem 1rem;
+    animation: ${test} .6s forwards;
   }
 `;
 

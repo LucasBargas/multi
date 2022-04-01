@@ -1,8 +1,15 @@
 import React from 'react';
+import Btn from './Button.style';
 
-const Button = () => {
+const Button = ({ children, borderColor, buttonColor, fontColor }) => {
   return (
-    <div>Button</div>
+    <Btn 
+      borderColor={borderColor} 
+      buttonColor={buttonColor}
+      fontColor={fontColor}
+    >
+      {children}
+    </Btn>
   )
 }
 
