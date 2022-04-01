@@ -1,8 +1,19 @@
 import React from 'react';
+import Container from '../../styles/Container';
+import Logo from './Logo/Logo';
+import Nav from './Nav/Nav';
+import * as S from './Header.styles';
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <S.HeaderFixed>
+      <Container>
+        <S.HeaderArea>
+          <Logo />
+          <Nav />
+        </S.HeaderArea>
+      </Container>
+    </S.HeaderFixed>
   )
 }
 
