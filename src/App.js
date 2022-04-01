@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div>App testeeeeeee</div>
+    <div>App test</div>
   )
 }
 
