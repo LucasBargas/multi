@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-const test = keyframes`
+const showMenu = keyframes`
   from {
     opacity: 0;
   }
@@ -22,7 +22,7 @@ export const NavContainer = styled.nav`
     height: 100vh;
     background: rgba(4, 12, 21, .9);
     padding: 0 1rem 1rem 1rem;
-    animation: ${test} .6s forwards;
+    animation: ${showMenu} .6s forwards;
   }
 `;
 
