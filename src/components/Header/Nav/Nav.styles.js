@@ -80,6 +80,6 @@ export const ButtonMenu = styled(ButtonClose)`
   margin: 0;
   
   @media (max-width: 768px) {
-    display: ${({ mobile }) => (mobile ? 'none' : 'flex')};;
+    display: ${({ mobile }) => (mobile ? 'none' : 'flex')};
   }
 `;
