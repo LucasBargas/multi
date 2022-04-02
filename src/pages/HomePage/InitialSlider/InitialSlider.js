@@ -36,7 +36,14 @@ const InitialSlider = () => {
             <S.SliderContent>
               <h2>{content.title}</h2>
               <p>{content.text}</p>
-              <Button borderColor='#ef6445' buttonColor='#ef6445' fontColor='#ffffff'>Read More</Button>
+              <Button 
+                borderColor='#ef6445' 
+                buttonColor='#ef6445' 
+                fontColor='#ffffff'
+                hoverColor='#fa785c' 
+              >
+                Read More
+              </Button>
             </S.SliderContent>
           </Container>
         </S.SliderBackground>

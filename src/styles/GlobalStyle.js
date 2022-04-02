@@ -17,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     background: #fff;
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
     a {
       text-decoration: none;
     }

@@ -8,14 +8,14 @@ export const SliderContainer = styled.section`
 export const SliderBackground = styled.div`
   display: flex;
   align-items: center;
-  height: calc(100vh - 86px);
+  height: calc(100vh - 82px);
   width: 100%;
   background-position: center;
   background-size: cover;
   background-image: url(${({ image }) => image});
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  /* top: 0;
+  left: 0; */
   z-index: 2;
 
   &::after {
@@ -28,12 +28,8 @@ export const SliderBackground = styled.div`
     height: 100%;
   }
 
-  @media (max-width: 768px) {
-    height: calc(100vh - 64px);
-  }
-
   @media (max-width: 414px) {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 70px);
   }
 `;
 
