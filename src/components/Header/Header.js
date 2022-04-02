@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '../../styles/Container';
 import Logo from './Logo/Logo';
 import Nav from './Nav/Nav';

@@ -7,6 +7,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 
+  html {
+    @media (max-width: 414px) {
+      font-size: 14px;
+    }
+  }
+
   body {
     font-family: 'Open Sans', sans-serif;
     background: #fff;

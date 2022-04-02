@@ -29,6 +29,7 @@ export const NavContainer = styled.nav`
 export const NavList = styled.ul`
   display: flex;
   align-items: center;
+  overflow-y: auto;
 
   a {
     font-size: .9375rem;
@@ -58,7 +59,7 @@ export const NavList = styled.ul`
   }
 `;
 
-export const ButtonClose = styled.button`
+export const BtnCloseMenu = styled.button`
   border: none;
   padding: 1rem 0 1rem .5rem;
   margin: 5px 0;
@@ -73,7 +74,7 @@ export const ButtonClose = styled.button`
   }
 `;
 
-export const ButtonMenu = styled(ButtonClose)`
+export const BtnOpenMenu = styled(BtnCloseMenu)`
   color: #0b2341;
   padding: .25rem;
   font-size: 1.5rem;

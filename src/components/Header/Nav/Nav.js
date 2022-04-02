@@ -25,14 +25,14 @@ const Nav = () => {
           <li><a onClick={handleNavLink} href="#contact">Contact</a></li>
         </S.NavList>
 
-        <S.ButtonClose onClick={() => setMobile(false)} mobile={mobile}>
+        <S.BtnCloseMenu onClick={() => setMobile(false)} mobile={mobile}>
           <BsXLg />
-        </S.ButtonClose>
+        </S.BtnCloseMenu>
       </S.NavContainer>
 
-      <S.ButtonMenu onClick={() => setMobile(true)} mobile={mobile}>
+      <S.BtnOpenMenu onClick={() => setMobile(true)} mobile={mobile}>
         <BsList />
-      </S.ButtonMenu>
+      </S.BtnOpenMenu>
     </div>
   )
 }

@@ -1,8 +1,12 @@
 import React from 'react';
+import HomePageContainer from './HomePage.styles';
+import InitialSlider from './InitialSlider/InitialSlider';
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <HomePageContainer>
+      <InitialSlider />
+    </HomePageContainer>
   )
 }
 
