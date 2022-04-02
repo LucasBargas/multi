@@ -11,10 +11,6 @@ const Btn = styled.a`
   font-weight: 600;
   font-size: .875rem;
   transition: .6s;
-
-  &:hover {
-    opacity: .9;
-  }
 `;
 
 export default Btn;
