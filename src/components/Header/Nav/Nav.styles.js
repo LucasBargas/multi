@@ -30,6 +30,7 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   overflow-y: auto;
+  border-radius: .25rem;
 
   a {
     font-size: .9375rem;
