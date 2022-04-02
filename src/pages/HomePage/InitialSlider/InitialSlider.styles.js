@@ -37,6 +37,10 @@ export const SliderContent = styled.div`
   position: relative;
   z-index: 3;
 
+  @media (max-width: 820px) {
+    text-align: center;
+  }
+
   h2, p {
     color: #fff;
   }
@@ -44,11 +48,19 @@ export const SliderContent = styled.div`
   h2 {
     font-size: 3rem;
     font-family: 'Raleway', sans-serif;
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
   }
 
   p {
     font-family: 'Open Sans', sans-serif;
     width: 50%;
     margin: 10px 0 30px 0;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 `;

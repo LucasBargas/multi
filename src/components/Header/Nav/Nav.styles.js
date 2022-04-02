@@ -48,6 +48,10 @@ export const NavList = styled.ul`
 
     &:hover {
       color: #ed502e;
+
+      @media (max-width: 1024px) {
+        color: #0b2341;
+      }
     }
   }
 

@@ -16,6 +16,13 @@ const BtnReturn = styled.button`
   visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
   opacity: ${({ visible }) => (visible ? '1' : '0')};
 
+  @media (max-width: 320px) {
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    bottom: 10px;
+  }
+
   &:hover {
     background: #fa785c;
   }
