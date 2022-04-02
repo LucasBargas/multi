@@ -8,17 +8,19 @@ const Header = () => {
   const [height, setHeight] = useState(true);
 
   useEffect(() => {
-    const handleScroll = (e) => {
-      if (window.pageYOffset > 300) {
+    const handleScroll = () => {
+      if (window.pageYOffset > 100) {
         setHeight(false);
 
-      } else if (window.pageYOffset < 300) {
+      } else if (window.pageYOffset < 100) {
         setHeight(true);
       }
     }
 
     window.addEventListener('scroll', handleScroll);
-  }, [])
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <S.HeaderFixed height = {height}>
