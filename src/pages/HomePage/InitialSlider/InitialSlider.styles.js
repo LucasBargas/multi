@@ -37,7 +37,7 @@ export const SliderContainer = styled.section`
   position: relative;
   z-index: 1;
   height: calc(100vh - 82px);
-  background: black;
+  background: #0b2341;
 
   @media (max-width: 414px) {
     height: calc(100vh - 70px);
@@ -133,12 +133,6 @@ export const SliderContent = styled.div`
 
 export const ArrowButtons = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  position: absolute;
-  bottom: 50%;
-  left: 0;
-  z-index: 10;
   padding: 0 10px;
 
   button {
@@ -150,6 +144,17 @@ export const ArrowButtons = styled.div`
     background: rgba(255, 255, 255, .2);
     border-radius: 50%;
     transition: .4s;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+
+    &:first-of-type {
+      left: 10px;
+    }
+
+    &:last-of-type {
+      right: 10px;
+    }
 
     @media (max-width: 480px) {
       display: none;

@@ -29,7 +29,7 @@ const sliderContent = [
 ];
 
 const InitialSlider = () => {
-  const [active, setActive] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const slider = useRef();
 
   const handleSliderItems = () => {
@@ -41,25 +41,25 @@ const InitialSlider = () => {
   useEffect(() => {
     const sliderItemsArray = handleSliderItems();
     sliderItemsArray.forEach(el => el.classList.remove('active'));
-    sliderItemsArray[active].classList.add('active');
-  }, [active]);
+    sliderItemsArray[currentSlide].classList.add('active');
+  }, [currentSlide]);
 
 
   const handleClickRight = () => {
     const sliderItemsArray = handleSliderItems();
-    if (active < sliderItemsArray.length - 1) {
-      setActive(active + 1)
+    if (currentSlide < sliderItemsArray.length - 1) {
+      setCurrentSlide(currentSlide + 1)
     } else {
-      setActive(0)
+      setCurrentSlide(0)
     }
   }
 
   const handleClickLeft = () => {
     const sliderItemsArray = handleSliderItems();
-    if (active === 0) {
-      setActive(sliderItemsArray.length - 1);
+    if (currentSlide === 0) {
+      setCurrentSlide(sliderItemsArray.length - 1);
     } else {
-      setActive(active - 1);
+      setCurrentSlide(currentSlide - 1);
     }
   }
 
