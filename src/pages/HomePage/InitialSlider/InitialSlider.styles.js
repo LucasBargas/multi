@@ -1,8 +1,47 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+export const titleAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+`;
+
+export const textAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+`;
+
+export const buttonAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+`;
 
 export const SliderContainer = styled.section`
   position: relative;
   z-index: 1;
+  height: calc(100vh - 82px);
+  background: black;
+
+  @media (max-width: 414px) {
+    height: calc(100vh - 70px);
+  }
 `;
 
 export const SliderBackground = styled.div`
@@ -16,7 +55,25 @@ export const SliderBackground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  opacity: 0;
+  transition: .6s;
+
+  &.active {
+    opacity: 1;
+    z-index: 2;
+
+    h2 {
+      animation: ${titleAnimation} 1s forwards;
+    }
+
+    p {
+      animation: ${textAnimation} 1s forwards .4s;
+    }
+
+    a {
+      animation: ${buttonAnimation} 1s forwards .8s;
+    }
+  }
 
   &::after {
     content: '';
@@ -28,6 +85,10 @@ export const SliderBackground = styled.div`
     height: 100%;
   }
 
+  h2, p, a {
+    opacity: 0;
+  }
+
   @media (max-width: 414px) {
     height: calc(100vh - 70px);
   }
@@ -37,7 +98,7 @@ export const SliderContent = styled.div`
   position: relative;
   z-index: 3;
 
-  @media (max-width: 820px) {
+  @media (max-width: 1024px) {
     text-align: center;
   }
 
@@ -60,7 +121,52 @@ export const SliderContent = styled.div`
     margin: 10px 0 30px 0;
 
     @media (max-width: 1024px) {
+      margin: 10px auto 30px auto;
+      width: 80%;
+    }
+
+    @media (max-width: 480px) {
       width: 100%;
+    }
+  }
+`;
+
+export const ArrowButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  z-index: 10;
+  padding: 0 10px;
+
+  button {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    transition: .4s;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+
+    svg {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, .5);
+      transition: .4s;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, .3);
+
+      svg {
+        color: rgba(255, 255, 255, .7);
+      }
     }
   }
 `;

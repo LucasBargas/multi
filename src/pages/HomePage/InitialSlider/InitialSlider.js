@@ -1,4 +1,5 @@
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import * as S from './InitialSlider.styles';
 import slideOne from '../../../assets/img/slide/slide-1.jpg';
 import slideTwo from '../../../assets/img/slide/slide-2.jpg';
@@ -28,8 +29,42 @@ const sliderContent = [
 ];
 
 const InitialSlider = () => {
+  const [active, setActive] = useState(0);
+  const slider = useRef();
+
+  const handleSliderItems = () => {
+    const sliderItems = Array.from(slider.current.children);
+    sliderItems.pop();
+    return sliderItems;
+  }
+
+  useEffect(() => {
+    const sliderItemsArray = handleSliderItems();
+    sliderItemsArray.forEach(el => el.classList.remove('active'));
+    sliderItemsArray[active].classList.add('active');
+  }, [active]);
+
+
+  const handleClickRight = () => {
+    const sliderItemsArray = handleSliderItems();
+    if (active < sliderItemsArray.length - 1) {
+      setActive(active + 1)
+    } else {
+      setActive(0)
+    }
+  }
+
+  const handleClickLeft = () => {
+    const sliderItemsArray = handleSliderItems();
+    if (active === 0) {
+      setActive(sliderItemsArray.length - 1);
+    } else {
+      setActive(active - 1);
+    }
+  }
+
   return (
-    <S.SliderContainer>
+    <S.SliderContainer ref={slider}>
       {sliderContent.map(content => (
         <S.SliderBackground key={content.id} image={content.image}>
           <Container>
@@ -48,6 +83,14 @@ const InitialSlider = () => {
           </Container>
         </S.SliderBackground>
       ))}
+      <S.ArrowButtons>
+        <button onClick={handleClickLeft}>
+          <FaChevronLeft />
+        </button>
+        <button onClick={handleClickRight}>
+          <FaChevronRight />
+        </button>
+      </S.ArrowButtons>
     </S.SliderContainer>
   )
 }
