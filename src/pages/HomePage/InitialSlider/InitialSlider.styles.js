@@ -13,9 +13,9 @@ export const SliderBackground = styled.div`
   background-position: center;
   background-size: cover;
   background-image: url(${({ image }) => image});
-  position: relative;
-  /* top: 0;
-  left: 0; */
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
 
   &::after {
