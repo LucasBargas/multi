@@ -31,17 +31,20 @@ const sliderContent = [
 const InitialSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slider = useRef();
+  const dots = useRef();
+  const active = 'active';
 
   const handleSliderItems = () => {
     const sliderItems = Array.from(slider.current.children);
+    sliderItems.pop();
     sliderItems.pop();
     return sliderItems;
   }
 
   useEffect(() => {
     const sliderItemsArray = handleSliderItems();
-    sliderItemsArray.forEach(el => el.classList.remove('active'));
-    sliderItemsArray[currentSlide].classList.add('active');
+    sliderItemsArray.forEach(el => el.classList.remove(active));
+    sliderItemsArray[currentSlide].classList.add(active);
   }, [currentSlide]);
 
 
@@ -62,6 +65,18 @@ const InitialSlider = () => {
       setCurrentSlide(currentSlide - 1);
     }
   }
+
+  useEffect(() => {
+    const dotsArray = Array.from(dots.current.children);
+    const handleDotClick = (index) => setCurrentSlide(index);
+
+    dotsArray.forEach((dot, index) => {
+      dot.classList.remove(active);
+      dot.addEventListener('click', () => handleDotClick(index));
+    })
+
+    dotsArray[currentSlide].classList.add(active);
+  }, [currentSlide]);
 
   return (
     <S.SliderContainer ref={slider}>
@@ -91,6 +106,12 @@ const InitialSlider = () => {
           <FaChevronRight />
         </button>
       </S.ArrowButtons>
+
+      <S.DotsButton ref={dots}>
+        {sliderContent.map(content => (
+          <span key={content.id}></span>
+        ))}
+      </S.DotsButton>
     </S.SliderContainer>
   )
 }

@@ -147,6 +147,7 @@ export const ArrowButtons = styled.div`
     position: absolute;
     z-index: 4;
     top: 50%;
+    transform: translate3d(0, -50%, 0);
 
     &:first-of-type {
       left: 10px;
@@ -172,6 +173,28 @@ export const ArrowButtons = styled.div`
       svg {
         color: rgba(255, 255, 255, .7);
       }
+    }
+  }
+`;
+
+export const DotsButton = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  z-index: 5;
+
+  span {
+    background: rgba(255, 255, 255, .6);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+
+    &.active {
+      background: #ed502e;
     }
   }
 `;
