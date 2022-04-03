@@ -9,16 +9,11 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 100) {
-        setHeight(false);
-
-      } else if (window.pageYOffset < 100) {
-        setHeight(true);
-      }
+      if (window.pageYOffset > 100) setHeight(false);
+      else if (window.pageYOffset < 100) setHeight(true);
     }
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

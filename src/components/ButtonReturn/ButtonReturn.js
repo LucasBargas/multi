@@ -8,22 +8,15 @@ const ButtonReturn = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 100) {
-        setVisible(true);
-
-      } else if (window.pageYOffset < 100) {
-        setVisible(false);
-      }
+      if (window.pageYOffset > 100) setVisible(true);
+      else if (window.pageYOffset < 100) setVisible(false);
     }
 
     window.addEventListener('scroll', handleScroll);
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleReturnButton = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+  const handleReturnButton = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <BtnReturn visible={visible} onClick={handleReturnButton}>

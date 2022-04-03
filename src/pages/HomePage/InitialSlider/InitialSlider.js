@@ -25,7 +25,7 @@ const sliderContent = [
     image: slideThree,
     title: 'Sequi ea ut et est quaerat',
     text: 'Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.',
-  },
+  }
 ];
 
 const InitialSlider = () => {
@@ -50,20 +50,14 @@ const InitialSlider = () => {
 
   const handleClickRight = () => {
     const sliderItemsArray = handleSliderItems();
-    if (currentSlide < sliderItemsArray.length - 1) {
-      setCurrentSlide(currentSlide + 1)
-    } else {
-      setCurrentSlide(0)
-    }
+    if (currentSlide < sliderItemsArray.length - 1) setCurrentSlide(currentSlide + 1);
+    else setCurrentSlide(0);
   }
 
   const handleClickLeft = () => {
     const sliderItemsArray = handleSliderItems();
-    if (currentSlide === 0) {
-      setCurrentSlide(sliderItemsArray.length - 1);
-    } else {
-      setCurrentSlide(currentSlide - 1);
-    }
+    if (currentSlide === 0) setCurrentSlide(sliderItemsArray.length - 1);
+    else  setCurrentSlide(currentSlide - 1);
   }
 
   useEffect(() => {

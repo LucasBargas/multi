@@ -56,7 +56,7 @@ export const SliderBackground = styled.div`
   top: 0;
   left: 0;
   opacity: 0;
-  transition: .6s;
+  transition: .6s all ease;
 
   &.active {
     opacity: 1;

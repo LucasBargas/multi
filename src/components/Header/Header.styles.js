@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const HeaderFixed = styled.header`
   display: flex;
@@ -11,6 +11,10 @@ export const HeaderFixed = styled.header`
   width: 100%;
   height: ${({ height }) => (height ? '82px' : '65px')};
   transition: .5s;
+
+  ${({ height }) => height === false && css`
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, .1);
+  `}
 
   @media (max-width: 414px) {
     height: ${({ height }) => (height ? '70px' : '60px')};

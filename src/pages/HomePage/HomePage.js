@@ -8,7 +8,6 @@ const HomePage = () => {
     <HomePageContainer>
       <InitialSlider />
       <BtnReturn />
-      <p>Olá</p>
     </HomePageContainer>
   )
 }

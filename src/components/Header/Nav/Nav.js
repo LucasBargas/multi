@@ -9,10 +9,8 @@ const Nav = () => {
     if (target === currentTarget) setMobile(false);
   }
 
-  const handleNavLink = () => {
-    setMobile(false);
-  }
-
+  const handleNavLink = () => setMobile(false);
+  
   return (
     <div>
       <S.NavContainer mobile={mobile} onClick={handleOutsideClick}>
