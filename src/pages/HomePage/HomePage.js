@@ -5,6 +5,7 @@ import WhyUsSection from './WhyUsSection/WhyUsSection';
 import HomePageContainer from './HomePage.styles';
 import InitialSlider from './InitialSlider/InitialSlider';
 import ServicesSection from './ServicesSection/ServicesSection';
+import Call from './Call/Call';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <AboutSection />
       <WhyUsSection />
       <ServicesSection />
+      <Call />
     </HomePageContainer>
   )
 }
