@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    @media (max-width: 414px) {
+    @media (max-width: 375px) {
       font-size: 14px;
     }
   }
@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Open Sans', sans-serif;
     background: #fff;
+    color: #444444;
 
     img {
       display: block;
