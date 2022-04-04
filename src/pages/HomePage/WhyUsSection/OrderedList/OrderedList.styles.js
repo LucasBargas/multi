@@ -52,7 +52,7 @@ export const ListQuestion = styled.div`
   cursor: pointer;
 
   &:hover {
-    span, svg {
+    span:last-of-type , svg {
       color: #ed502e !important;
 
       @media (max-width: 1024px) {
