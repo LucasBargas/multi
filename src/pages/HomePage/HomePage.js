@@ -4,6 +4,7 @@ import AboutSection from './AboutSection/AboutSection';
 import WhyUsSection from './WhyUsSection/WhyUsSection';
 import HomePageContainer from './HomePage.styles';
 import InitialSlider from './InitialSlider/InitialSlider';
+import ServicesSection from './ServicesSection/ServicesSection';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <BtnReturn />
       <AboutSection />
       <WhyUsSection />
+      <ServicesSection />
     </HomePageContainer>
   )
 }
