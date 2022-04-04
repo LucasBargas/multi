@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.section`
   background: #fff;
-  padding: 60px 1.5rem;
+  padding: 60px 0;
 `;
 
 export const AboutArea = styled.div`
