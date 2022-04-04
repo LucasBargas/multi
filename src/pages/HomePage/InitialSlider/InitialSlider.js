@@ -57,7 +57,7 @@ const InitialSlider = () => {
   const handleClickLeft = () => {
     const sliderItemsArray = handleSliderItems();
     if (currentSlide === 0) setCurrentSlide(sliderItemsArray.length - 1);
-    else  setCurrentSlide(currentSlide - 1);
+    else setCurrentSlide(currentSlide - 1);
   }
 
   useEffect(() => {
