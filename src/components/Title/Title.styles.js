@@ -16,6 +16,7 @@ const TitleContainer = styled.div`
     color: #aaaaaa;
     font-size: .875rem;
     letter-spacing: 2px;
+    font-weight: 500;
 
     &::after {
       content: "";

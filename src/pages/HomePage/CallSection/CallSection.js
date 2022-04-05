@@ -1,9 +1,8 @@
-import React from 'react';
-import * as S from './Call.styles';
+import * as S from './CallSection.styles';
 import Container from '../../../styles/Container';
 import Button from '../../../components/Button/Button';
 
-const Call = () => {
+const CallSection = () => {
   return (
     <S.CallContainer>
       <Container>
@@ -24,4 +23,4 @@ const Call = () => {
   )
 }
 
-export default Call;
+export default CallSection;
