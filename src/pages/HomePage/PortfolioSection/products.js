@@ -8,8 +8,6 @@ import app7 from '../../../assets/img/portfolio/portfolio-7.jpg';
 import app8 from '../../../assets/img/portfolio/portfolio-8.jpg';
 import app9 from '../../../assets/img/portfolio/portfolio-9.jpg';
 
-console.log(app1)
-
 const products = [
   {
     title: "app-1",

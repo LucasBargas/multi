@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
-import Container from '../../styles/Container';
+import { useContext, useEffect, useState } from 'react';
+import Container from '../../../styles/Container';
+import * as S from './Header.styles';
 import Logo from './Logo/Logo';
 import Nav from './Nav/Nav';
-import * as S from './Header.styles';
+import UserContext from '../../../helpers/UserContext';
 
 const Header = () => {
   const [height, setHeight] = useState(true);
+  const contextSections = useContext(UserContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +24,7 @@ const Header = () => {
       <Container>
         <S.HeaderArea>
           <Logo />
-          <Nav />
+          <Nav contextSections={contextSections} />
         </S.HeaderArea>
       </Container>
     </S.HeaderFixed>

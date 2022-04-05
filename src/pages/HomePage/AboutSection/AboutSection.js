@@ -7,7 +7,7 @@ import AboutCards from './AboutCards/AboutCards';
 
 const AboutSection = () => {
   return (
-    <S.AboutContainer>
+    <S.AboutContainer id='about'>
       <Container>
         <Title subTitle='About'>About Us</Title>
         <S.AboutArea>

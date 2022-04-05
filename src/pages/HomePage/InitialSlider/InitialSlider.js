@@ -73,7 +73,7 @@ const InitialSlider = () => {
   }, [currentSlide]);
 
   return (
-    <S.SliderContainer ref={slider}>
+    <S.SliderContainer ref={slider} id='home'>
       {sliderContent.map(content => (
         <S.SliderBackground key={content.id} image={content.image}>
           <Container>

@@ -18,7 +18,7 @@ const PortfolioSection = () => {
   }
 
   return (
-    <S.PortfolioContainer>
+    <S.PortfolioContainer id='portfolio'>
       <Container>
         <Title subTitle='Portfolio'>Check Our Portfolio</Title>
         <S.NavContainer>
@@ -39,14 +39,14 @@ const PortfolioSection = () => {
                 <img src={productMap.src} alt={productMap.title} />
                 <S.ProductContent>
                   <div>
-                    <p>
+                    <section>
                       <h3>{productMap.name}</h3>
                       <span style={{ textTransform: 'capitalize' }}>{productMap.category}</span>
-                    </p>
-                    <p>
+                    </section>
+                    <section>
                       <a href='/'><AiOutlinePlus /></a>
                       <a href='/'><BiLink /></a>
-                    </p>
+                    </section>
                   </div>
                 </S.ProductContent>
               </figure>

@@ -5,7 +5,7 @@ import ServicesCards from './ServicesCards/ServicesCards';
 
 const ServicesSection = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id='services'>
       <Container>
         <Title subTitle='Services'>Check Our Services</Title>
         <ServicesCards />

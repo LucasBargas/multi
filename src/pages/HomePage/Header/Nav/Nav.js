@@ -2,15 +2,28 @@ import { useState } from 'react';
 import { BsXLg, BsList } from 'react-icons/bs';
 import * as S from './Nav.styles';
 
-const Nav = () => {
+const Nav = ({ contextSections }) => {
   const [mobile, setMobile] = useState(false);
-
+  
   const handleOutsideClick = ({ target, currentTarget }) => {
     if (target === currentTarget) setMobile(false);
   }
 
-  const handleNavLink = () => setMobile(false);
-  
+  const handleNavLink = e => {
+    e.preventDefault();
+    setMobile(false);
+    const href = e.target.getAttribute('href').replace('#', '');
+    selectSections(href)
+  }
+
+  const selectSections = href => {
+    const ids = Array.from(contextSections.current.children)
+    .filter(id => id.id === href);
+
+    const getTop = ids[0].offsetTop;
+    window.scrollTo({ top: getTop - 60, behavior: 'smooth' });
+  }
+
   return (
     <div>
       <S.NavContainer mobile={mobile} onClick={handleOutsideClick}>
