@@ -31,7 +31,7 @@ export const NavContainer = styled.nav`
 
     li {
       text-transform: uppercase;
-      font-family: "Poppins", sans-serif;
+      font-family: 'Open Sans', sans-serif;
       font-weight: 600;
       font-size: .875rem;
       color: #0b2341;
