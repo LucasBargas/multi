@@ -8,25 +8,22 @@ import InitialSlider from './InitialSlider/InitialSlider';
 import ServicesSection from './ServicesSection/ServicesSection';
 import CallSection from './CallSection/CallSection';
 import PortfolioSection from './PortfolioSection/PortfolioSection';
-import UserContext from '../../helpers/UserContext';
 
 const HomePage = () => {
   const sections = useRef();
  
   return (
     <>
-      <UserContext.Provider value={sections}>
-        <Header />
-        <HomePageContainer ref={sections}>
-          <InitialSlider />
-          <BtnReturn />
-          <AboutSection />
-          <WhyUsSection />
-          <ServicesSection />
-          <CallSection />
-          <PortfolioSection />
-        </HomePageContainer>
-      </UserContext.Provider>
+      <Header sections={sections} />
+      <HomePageContainer ref={sections}>
+        <InitialSlider />
+        <BtnReturn />
+        <AboutSection />
+        <WhyUsSection />
+        <ServicesSection />
+        <CallSection />
+        <PortfolioSection />
+      </HomePageContainer>
     </>
   )
 }
