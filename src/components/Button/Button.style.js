@@ -10,7 +10,7 @@ const Btn = styled.a`
   border-radius: 4px;
   font-weight: 600;
   font-size: .875rem;
-  transition: .6s;
+  transition: .4s;
 
   &:hover {
     background: ${({ hoverColor }) => hoverColor};

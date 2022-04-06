@@ -3,7 +3,7 @@ import * as S from './Modal.styles';
 import { IoCloseSharp } from 'react-icons/io5';
 
 const Modal = () => {
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const handleOutsideClick = ({ target, currentTarget }) => {
     if (target === currentTarget) setModal(false);
