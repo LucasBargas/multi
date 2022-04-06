@@ -48,6 +48,7 @@ export const ButtonClose = styled.div`
 
     svg {
       font-size: 1.5rem;
+      color: #0f2f57;
     }
   }
 `;

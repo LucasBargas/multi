@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import * as S from './Modal.styles';
-import { IoClose } from 'react-icons/io5';
+import { IoCloseSharp } from 'react-icons/io5';
 
 const Modal = () => {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
 
   const handleOutsideClick = ({ target, currentTarget }) => {
     if (target === currentTarget) setModal(false);
@@ -18,7 +18,7 @@ const Modal = () => {
       <S.ModalArea>
         <S.ButtonClose>
           <button onClick={() => setModal(false)}>
-            <IoClose />
+            <IoCloseSharp />
           </button>
         </S.ButtonClose>
         <S.ModalContent>
