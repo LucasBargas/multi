@@ -8,6 +8,7 @@ import InitialSlider from './InitialSlider/InitialSlider';
 import ServicesSection from './ServicesSection/ServicesSection';
 import CallSection from './CallSection/CallSection';
 import PortfolioSection from './PortfolioSection/PortfolioSection';
+import TeamSection from './TeamSection/TeamSection';
 
 const HomePage = () => {
   const sections = useRef();
@@ -23,6 +24,7 @@ const HomePage = () => {
         <ServicesSection />
         <CallSection />
         <PortfolioSection />
+        <TeamSection />
       </HomePageContainer>
     </>
   )

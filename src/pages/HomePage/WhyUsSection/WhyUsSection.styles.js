@@ -14,7 +14,7 @@ const pulse = keyframes`
 `;
 
 export const WhyUsContainer = styled.section`
-  background: #f6f9fe;
+  background: #f6f9fd;
   display: flex;
 
   @media (max-width: 820px) {
