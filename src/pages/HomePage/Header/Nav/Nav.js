@@ -13,7 +13,7 @@ const Nav = ({ sections }) => {
     e.preventDefault();
     setMobile(false);
     const href = e.target.getAttribute('href').replace('#', '');
-    selectSections(href)
+    selectSections(href);
   }
 
   const selectSections = href => {
