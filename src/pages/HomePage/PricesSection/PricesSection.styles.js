@@ -16,7 +16,7 @@ export const PricesArea = styled.div`
     grid-template-columns: 50%;
   }
 
-  @media (max-width: 820px) {
+  @media (max-width: 480px) {
     justify-content: center;
     grid-template-columns: 100%;
   }

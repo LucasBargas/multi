@@ -10,6 +10,7 @@ import CallSection from './CallSection/CallSection';
 import PortfolioSection from './PortfolioSection/PortfolioSection';
 import TeamSection from './TeamSection/TeamSection';
 import PricesSection from './PricesSection/PricesSection';
+import FaqContainer from './FaqSection/FaqSection';
 import Modal from './Modal/Modal';
 
 const HomePage = () => {
@@ -28,6 +29,7 @@ const HomePage = () => {
         <PortfolioSection />
         <TeamSection />
         <PricesSection />
+        <FaqContainer />
         <Modal />
       </HomePageContainer>
     </>

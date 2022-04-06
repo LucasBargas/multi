@@ -19,6 +19,11 @@ export const WhyUsContainer = styled.section`
 
   @media (max-width: 820px) {
     flex-direction: column;
+    padding: 60px 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 0;
   }
 `;
 
