@@ -9,6 +9,7 @@ import ServicesSection from './ServicesSection/ServicesSection';
 import CallSection from './CallSection/CallSection';
 import PortfolioSection from './PortfolioSection/PortfolioSection';
 import TeamSection from './TeamSection/TeamSection';
+import Modal from './Modal/Modal';
 
 const HomePage = () => {
   const sections = useRef();
@@ -25,6 +26,7 @@ const HomePage = () => {
         <CallSection />
         <PortfolioSection />
         <TeamSection />
+        <Modal />
       </HomePageContainer>
     </>
   )
