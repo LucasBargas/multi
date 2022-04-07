@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContactContainer = styled.div`
+export const ContactContainer = styled.section`
   padding: 60px 0;
   background: #f6f9fd;
 `;
