@@ -7,7 +7,7 @@ const Container = styled.div`
   padding: 0 1.5rem;
 
   @media (max-width: 414px) {
-    padding: 0 .875rem;
+    padding: 0 1.5rem;
   }
 `;
 
