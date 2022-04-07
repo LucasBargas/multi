@@ -13,6 +13,7 @@ import PricesSection from './PricesSection/PricesSection';
 import FaqContainer from './FaqSection/FaqSection';
 import ContactSection from './ContactSection/ContactSection';
 import Modal from './Modal/Modal';
+import Footer from './Footer/Footer';
 
 const HomePage = () => {
   const sections = useRef();
@@ -32,6 +33,7 @@ const HomePage = () => {
         <PricesSection />
         <FaqContainer />
         <ContactSection />
+        <Footer />
         <Modal />
       </HomePageContainer>
     </>
