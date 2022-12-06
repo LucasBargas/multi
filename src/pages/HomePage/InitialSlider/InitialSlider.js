@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useRef, useState } from 'react';
+import useInterval from 'use-interval';
 import * as S from './InitialSlider.styles';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import slideOne from '../../../assets/img/slide/slide-1.jpg';
 import slideTwo from '../../../assets/img/slide/slide-2.jpg';
 import slideThree from '../../../assets/img/slide/slide-3.jpg';
@@ -29,10 +30,8 @@ const sliderContent = [
 ];
 
 const InitialSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(1);
   const slider = useRef();
-  const dots = useRef();
-  const active = 'active';
 
   const handleSliderItems = () => {
     const sliderItems = Array.from(slider.current.children);
@@ -41,41 +40,26 @@ const InitialSlider = () => {
     return sliderItems;
   }
 
-  useEffect(() => {
-    const sliderItemsArray = handleSliderItems();
-    sliderItemsArray.forEach(el => el.classList.remove(active));
-    sliderItemsArray[currentSlide].classList.add(active);
-  }, [currentSlide]);
-
-
   const handleClickRight = () => {
     const sliderItemsArray = handleSliderItems();
-    if (currentSlide < sliderItemsArray.length - 1) setCurrentSlide(currentSlide + 1);
-    else setCurrentSlide(0);
+    if (currentSlide < sliderItemsArray.length) setCurrentSlide(currentSlide + 1);
+    else setCurrentSlide(1);
   }
 
   const handleClickLeft = () => {
     const sliderItemsArray = handleSliderItems();
-    if (currentSlide === 0) setCurrentSlide(sliderItemsArray.length - 1);
+    if (currentSlide === 1) setCurrentSlide(sliderItemsArray.length);
     else setCurrentSlide(currentSlide - 1);
   }
 
-  useEffect(() => {
-    const dotsArray = Array.from(dots.current.children);
-    const handleDotClick = (index) => setCurrentSlide(index);
-
-    dotsArray.forEach((dot, index) => {
-      dot.classList.remove(active);
-      dot.addEventListener('click', () => handleDotClick(index));
-    })
-
-    dotsArray[currentSlide].classList.add(active);
-  }, [currentSlide]);
+  useInterval(() => {
+    handleClickRight();
+  }, 4000);
 
   return (
     <S.SliderContainer ref={slider} id='home'>
       {sliderContent.map(content => (
-        <S.SliderBackground key={content.id} image={content.image}>
+        <S.SliderBackground key={content.id} image={content.image} currentSlide={currentSlide}>
           <Container>
             <S.SliderContent>
               <h2>{content.title}</h2>
@@ -101,9 +85,9 @@ const InitialSlider = () => {
         </button>
       </S.ArrowButtons>
 
-      <S.DotsButton ref={dots}>
+      <S.DotsButton currentSlide={currentSlide}>
         {sliderContent.map(content => (
-          <span key={content.id}></span>
+          <span key={content.id} onClick={() => setCurrentSlide(content.id)}></span>
         ))}
       </S.DotsButton>
     </S.SliderContainer>
