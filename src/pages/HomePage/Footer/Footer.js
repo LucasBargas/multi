@@ -82,7 +82,7 @@ const Footer = () => {
 
         <S.FooterBottomArea>
           <p>© Copyright <strong>Multi</strong>. All Rights Reserved</p>
-          <p>Esta aplicação web é uma réplica desenvolvida por <a target="_blank" href="https://projetoslucasbargas.com/" rel="noopener noreferrer">Lucas Bargas</a> com base em um layout gratuito disponibilizado na web. Porém, toda a codificação é própria.</p>
+          <p>Esta aplicação web é uma réplica desenvolvida por <a target="_blank" href="https://projetoslucasbargas.vercel.app/" rel="noopener noreferrer">Lucas Bargas</a> com base em um layout gratuito disponibilizado na web. Porém, toda a codificação é própria.</p>
         </S.FooterBottomArea>
       </Container>
     </S.FooterContainer>
