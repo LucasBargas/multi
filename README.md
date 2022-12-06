@@ -1,8 +1,8 @@
 ## Link para visualizar a aplicação
-<https://multi.projetoslucasbargas.com/>
+<https://multi-lucasbargas.vercel.app/>
 
 ### Por que desenvolvi esta aplicação
-Finalizei recentemente um curso de ReactJS na Udemy e sempre, após um curso, eu procuro praticar o que aprendi o máximo possível com diferentes tipos de aplicações web.
+Após a finalização de um curso de ReactJS na Udemy, pratiquei o que aprendi com este projeto.
 
 ### Informações sobre a aplicação
 * Layout encontrado na web; 
