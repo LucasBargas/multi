@@ -18,7 +18,7 @@ const Header = ({ sections }) => {
   }, []);
 
   return (
-    <S.HeaderFixed height = {height}>
+    <S.HeaderFixed height={height}>
       <Container>
         <S.HeaderArea>
           <Logo />

@@ -31,6 +31,7 @@ const sliderContent = [
 
 const InitialSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
+  const [timer, setTimer] = useState(4000);
   const slider = useRef();
 
   const handleSliderItems = () => {
@@ -40,21 +41,31 @@ const InitialSlider = () => {
     return sliderItems;
   }
 
+  const handleWithTimer = () => {
+    setTimeout(() => {
+      setTimer(4000);
+    }, 4000);
+  }
+
   const handleClickRight = () => {
     const sliderItemsArray = handleSliderItems();
+    setTimer(null);
     if (currentSlide < sliderItemsArray.length) setCurrentSlide(currentSlide + 1);
     else setCurrentSlide(1);
+    handleWithTimer();
   }
 
   const handleClickLeft = () => {
     const sliderItemsArray = handleSliderItems();
+    setTimer(null);
     if (currentSlide === 1) setCurrentSlide(sliderItemsArray.length);
     else setCurrentSlide(currentSlide - 1);
+    handleWithTimer();
   }
 
   useInterval(() => {
     handleClickRight();
-  }, 4000);
+  }, timer ? timer : null);
 
   return (
     <S.SliderContainer ref={slider} id='home'>
