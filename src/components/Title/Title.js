@@ -1,4 +1,4 @@
-import TitleContainer from "./Title.styles";
+import TitleContainer from './Title.styles';
 
 const Title = ({ children, subTitle }) => {
   return (
@@ -6,7 +6,7 @@ const Title = ({ children, subTitle }) => {
       <h3>{subTitle}</h3>
       <h2>{children}</h2>
     </TitleContainer>
-  )
-}
+  );
+};
 
 export default Title;

@@ -11,7 +11,7 @@ const Header = ({ sections }) => {
     const handleScroll = () => {
       if (window.pageYOffset > 100) setHeight(false);
       else if (window.pageYOffset < 100) setHeight(true);
-    }
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -26,7 +26,7 @@ const Header = ({ sections }) => {
         </S.HeaderArea>
       </Container>
     </S.HeaderFixed>
-  )
-}
+  );
+};
 
 export default Header;

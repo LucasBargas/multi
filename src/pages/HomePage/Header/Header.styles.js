@@ -12,7 +12,9 @@ export const HeaderFixed = styled.header`
   height: ${({ height }) => (height ? '82px' : '65px')};
   transition: .5s;
 
-  ${({ height }) => height === false && css`
+  ${({ height }) =>
+    height === false &&
+    css`
     box-shadow: 0px 2px 15px rgba(0, 0, 0, .1);
   `}
 

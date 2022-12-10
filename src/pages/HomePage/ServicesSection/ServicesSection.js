@@ -5,13 +5,13 @@ import ServicesCards from './ServicesCards/ServicesCards';
 
 const ServicesSection = () => {
   return (
-    <SectionContainer id='services'>
+    <SectionContainer id="services">
       <Container>
-        <Title subTitle='Services'>Check Our Services</Title>
+        <Title subTitle="Services">Check Our Services</Title>
         <ServicesCards />
       </Container>
     </SectionContainer>
-  )
-}
+  );
+};
 
 export default ServicesSection;

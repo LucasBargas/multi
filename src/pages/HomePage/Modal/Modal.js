@@ -7,11 +7,11 @@ const Modal = () => {
 
   const handleOutsideClick = ({ target, currentTarget }) => {
     if (target === currentTarget) setModal(false);
-  }
+  };
 
   useEffect(() => {
     document.body.style.overflow = modal ? 'hidden' : 'auto';
-  }, [modal]); 
+  }, [modal]);
 
   return (
     <S.ModalContainer modal={modal} onClick={handleOutsideClick}>
@@ -23,9 +23,26 @@ const Modal = () => {
         </S.ButtonClose>
         <S.ModalContent>
           <h2>Lucas Bargas - Multi</h2>
-          <p><strong>Nota:</strong> Este projeto é uma réplica desenvolvida por <a href="https://projetoslucasbargas.com/" target="_blank" rel="noopener noreferrer">Lucas Bargas</a> a partir de um layout gratuito encontrado na web. Porém, toda a codificação é própria.</p>
+          <p>
+            <strong>Nota:</strong> Este projeto é uma réplica desenvolvida por{' '}
+            <a
+              href="https://projetoslucasbargas.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lucas Bargas
+            </a>{' '}
+            a partir de um layout gratuito encontrado na web. Porém, toda a
+            codificação é própria.
+          </p>
 
-          <S.LinkToGithub href="https://github.com/LucasBargas/projetos_react_js/tree/main/multi" target="_blank" rel="noopener noreferrer">Clique aqui para visualizar o Repositório no GitHub</S.LinkToGithub>
+          <S.LinkToGithub
+            href="https://github.com/LucasBargas/projetos_react_js/tree/main/multi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Clique aqui para visualizar o Repositório no GitHub
+          </S.LinkToGithub>
 
           <div>
             <S.ViewButton onClick={() => setModal(false)}>
@@ -35,7 +52,7 @@ const Modal = () => {
         </S.ModalContent>
       </S.ModalArea>
     </S.ModalContainer>
-  )
-}
+  );
+};
 
 export default Modal;

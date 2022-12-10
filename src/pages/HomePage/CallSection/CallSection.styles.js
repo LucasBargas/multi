@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CallContainer = styled.section`
   padding: 80px 0;

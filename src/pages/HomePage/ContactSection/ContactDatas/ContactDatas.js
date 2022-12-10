@@ -36,7 +36,7 @@ const ContactDatas = () => {
         </ul>
       </S.ContactDatasBox>
     </S.ContactDatasContainer>
-  )
-}
+  );
+};
 
 export default ContactDatas;

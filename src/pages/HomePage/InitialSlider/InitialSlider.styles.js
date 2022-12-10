@@ -58,7 +58,7 @@ export const SliderBackground = styled.div`
   opacity: 0;
   transition: .6s all ease;
 
-  &:nth-of-type(${({currentSlide}) => currentSlide}) {
+  &:nth-of-type(${({ currentSlide }) => currentSlide}) {
     opacity: 1;
     z-index: 2;
 
@@ -193,7 +193,7 @@ export const DotsButton = styled.div`
     margin: 0 3px;
     cursor: pointer;
 
-    &:nth-of-type(${({currentSlide}) => currentSlide}) {
+    &:nth-of-type(${({ currentSlide }) => currentSlide}) {
       background: #ed502e;
     }
   }

@@ -17,7 +17,7 @@ import Footer from './Footer/Footer';
 
 const HomePage = () => {
   const sections = useRef();
- 
+
   return (
     <>
       <Header sections={sections} />
@@ -37,7 +37,7 @@ const HomePage = () => {
         <Modal />
       </HomePageContainer>
     </>
-  )
-}
+  );
+};
 
 export default HomePage;

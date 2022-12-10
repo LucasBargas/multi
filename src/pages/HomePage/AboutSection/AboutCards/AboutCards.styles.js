@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AboutCardsContainer = styled.div`
   padding-top: 60px;
@@ -58,7 +58,7 @@ export const Card = styled.div`
     font-family: 'Poppins', sans-serif;
     color: #164682;
     transition: .5s;
-    
+
     &:hover {
       color: #2263b5;
     }

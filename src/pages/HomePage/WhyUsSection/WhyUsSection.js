@@ -13,12 +13,18 @@ const WhyUsSection = () => {
       </S.WhyUsVideo>
 
       <S.WhyUsList>
-        <h2>Eum ipsam laborum deleniti <strong>velit pariatur architecto</strong></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit</p>
+        <h2>
+          Eum ipsam laborum deleniti <strong>velit pariatur architecto</strong>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute
+          irure dolor in reprehenderit
+        </p>
         <OrderedList />
       </S.WhyUsList>
     </S.WhyUsContainer>
-  )
-}
+  );
+};
 
 export default WhyUsSection;

@@ -84,7 +84,7 @@ export const BtnOpenMenu = styled(BtnCloseMenu)`
   padding: .25rem;
   font-size: 1.5rem;
   margin: 0;
-  
+
   @media (max-width: 768px) {
     display: ${({ mobile }) => (mobile ? 'none' : 'flex')};
   }

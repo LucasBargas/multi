@@ -9,9 +9,9 @@ import TeamMemberFour from '../../../assets/img/team/team-4.jpg';
 
 const TeamSection = () => {
   return (
-    <S.TeamContainer id='team'>
+    <S.TeamContainer id="team">
       <Container>
-        <Title subTitle='team'>Check Our Team</Title>
+        <Title subTitle="team">Check Our Team</Title>
         <S.TeamArea>
           <S.TeamPhoto>
             <figure>
@@ -78,7 +78,7 @@ const TeamSection = () => {
               </S.TeamMemberMedias>
             </S.TeamMemberInfo>
           </S.TeamPhoto>
-          
+
           <S.TeamPhoto>
             <figure>
               <img src={TeamMemberFour} alt="Team Member Accountant" />
@@ -103,7 +103,7 @@ const TeamSection = () => {
         </S.TeamArea>
       </Container>
     </S.TeamContainer>
-  )
-}
+  );
+};
 
 export default TeamSection;

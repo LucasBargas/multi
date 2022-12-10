@@ -7,16 +7,16 @@ import ContactForm from './ContactForm/ContactForm';
 
 const ContactSection = () => {
   return (
-    <S.ContactContainer id='contact'>
+    <S.ContactContainer id="contact">
       <Container>
-        <Title subTitle='Contact'>Contact Us</Title>
+        <Title subTitle="Contact">Contact Us</Title>
         <S.ContactArea>
           <ContactDatas />
           <ContactForm />
         </S.ContactArea>
       </Container>
     </S.ContactContainer>
-  )
-}
+  );
+};
 
 export default ContactSection;

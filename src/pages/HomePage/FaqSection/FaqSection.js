@@ -8,11 +8,11 @@ const FaqSection = () => {
   return (
     <FaqContainer>
       <Container>
-        <Title subTitle='F.A.Q'>Frequently Asked Questions</Title>
+        <Title subTitle="F.A.Q">Frequently Asked Questions</Title>
         <FaqList />
       </Container>
     </FaqContainer>
-  )
-}
+  );
+};
 
 export default FaqSection;
