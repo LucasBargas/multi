@@ -1,12 +1,12 @@
-import app1 from '../../../assets/img/portfolio/portfolio-1.jpg';
-import app2 from '../../../assets/img/portfolio/portfolio-2.jpg';
-import app3 from '../../../assets/img/portfolio/portfolio-3.jpg';
-import app4 from '../../../assets/img/portfolio/portfolio-4.jpg';
-import app5 from '../../../assets/img/portfolio/portfolio-5.jpg';
-import app6 from '../../../assets/img/portfolio/portfolio-6.jpg';
-import app7 from '../../../assets/img/portfolio/portfolio-7.jpg';
-import app8 from '../../../assets/img/portfolio/portfolio-8.jpg';
-import app9 from '../../../assets/img/portfolio/portfolio-9.jpg';
+import app1 from '../../assets/img/portfolio/portfolio-1.jpg';
+import app2 from '../../assets/img/portfolio/portfolio-2.jpg';
+import app3 from '../../assets/img/portfolio/portfolio-3.jpg';
+import app4 from '../../assets/img/portfolio/portfolio-4.jpg';
+import app5 from '../../assets/img/portfolio/portfolio-5.jpg';
+import app6 from '../../assets/img/portfolio/portfolio-6.jpg';
+import app7 from '../../assets/img/portfolio/portfolio-7.jpg';
+import app8 from '../../assets/img/portfolio/portfolio-8.jpg';
+import app9 from '../../assets/img/portfolio/portfolio-9.jpg';
 
 const products = [
   {

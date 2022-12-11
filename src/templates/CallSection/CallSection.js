@@ -1,6 +1,6 @@
 import * as S from './CallSection.styles';
-import Container from '../../../styles/Container';
-import Button from '../../../components/Button/Button';
+import Container from '../../styles/Container';
+import Button from '../../components/Button/Button';
 
 const CallSection = () => {
   return (

@@ -2,9 +2,9 @@ import React from 'react';
 import * as S from './PricesSection.styles';
 import { BsCheck } from 'react-icons/bs';
 import { IoIosClose } from 'react-icons/io';
-import Container from '../../../styles/Container';
-import Title from '../../../components/Title/Title';
-import Button from '../../../components/Button/Button';
+import Container from '../../styles/Container';
+import Title from '../../components/Title/Title';
+import Button from '../../components/Button/Button';
 
 const PricesSection = () => {
   return (

@@ -1,8 +1,8 @@
 import * as S from './AboutSection.styles';
 import { BsCheckAll } from 'react-icons/bs';
-import Container from '../../../styles/Container';
-import Title from '../../../components/Title/Title';
-import Button from '../../../components/Button/Button';
+import Container from '../../styles/Container';
+import Title from '../../components/Title/Title';
+import Button from '../../components/Button/Button';
 import AboutCards from './AboutCards/AboutCards';
 
 const AboutSection = () => {

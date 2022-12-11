@@ -1,5 +1,5 @@
 import * as S from './Footer.styles';
-import Container from '../../../styles/Container';
+import Container from '../../styles/Container';
 import {
   FaTwitter,
   FaFacebookF,

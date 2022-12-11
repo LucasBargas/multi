@@ -1,5 +1,5 @@
 import * as S from './WhyUsSection.styles';
-import Img from '../../../assets/img/why-us.jpg';
+import Img from '../../assets/img/why-us.jpg';
 import { BsFillPlayFill } from 'react-icons/bs';
 import OrderedList from './OrderedList/OrderedList';
 

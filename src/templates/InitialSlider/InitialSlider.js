@@ -2,11 +2,11 @@ import { useRef, useState } from 'react';
 import useInterval from 'use-interval';
 import * as S from './InitialSlider.styles';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import slideOne from '../../../assets/img/slide/slide-1.jpg';
-import slideTwo from '../../../assets/img/slide/slide-2.jpg';
-import slideThree from '../../../assets/img/slide/slide-3.jpg';
-import Container from '../../../styles/Container';
-import Button from '../../../components/Button/Button';
+import slideOne from '../../assets/img/slide/slide-1.jpg';
+import slideTwo from '../../assets/img/slide/slide-2.jpg';
+import slideThree from '../../assets/img/slide/slide-3.jpg';
+import Container from '../../styles/Container';
+import Button from '../../components/Button/Button';
 
 const sliderContent = [
   {

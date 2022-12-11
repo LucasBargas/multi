@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './ContactSection.styles';
-import Container from '../../../styles/Container';
-import Title from '../../../components/Title/Title';
+import Container from '../../styles/Container';
+import Title from '../../components/Title/Title';
 import ContactDatas from './ContactDatas/ContactDatas';
 import ContactForm from './ContactForm/ContactForm';
 

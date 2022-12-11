@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Container from '../../../styles/Container';
+import Container from '../../styles/Container';
 import * as S from './Header.styles';
 import Logo from './Logo/Logo';
 import Nav from './Nav/Nav';

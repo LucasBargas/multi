@@ -1,42 +1,29 @@
-import { useRef } from 'react';
-import BtnReturn from '../../components/ButtonReturn/ButtonReturn';
-import Header from '../HomePage/Header/Header';
-import AboutSection from './AboutSection/AboutSection';
-import WhyUsSection from './WhyUsSection/WhyUsSection';
 import HomePageContainer from './HomePage.styles';
-import InitialSlider from './InitialSlider/InitialSlider';
-import ServicesSection from './ServicesSection/ServicesSection';
-import CallSection from './CallSection/CallSection';
-import PortfolioSection from './PortfolioSection/PortfolioSection';
-import TeamSection from './TeamSection/TeamSection';
-import PricesSection from './PricesSection/PricesSection';
-import FaqContainer from './FaqSection/FaqSection';
-import ContactSection from './ContactSection/ContactSection';
-import Modal from './Modal/Modal';
-import Footer from './Footer/Footer';
+import AboutSection from '../../templates/AboutSection/AboutSection';
+import WhyUsSection from '../../templates/WhyUsSection/WhyUsSection';
+import InitialSlider from '../../templates/InitialSlider/InitialSlider';
+import ServicesSection from '../../templates/ServicesSection/ServicesSection';
+import CallSection from '../../templates/CallSection/CallSection';
+import PortfolioSection from '../../templates/PortfolioSection/PortfolioSection';
+import TeamSection from '../../templates/TeamSection/TeamSection';
+import PricesSection from '../../templates/PricesSection/PricesSection';
+import FaqContainer from '../../templates/FaqSection/FaqSection';
+import ContactSection from '../../templates/ContactSection/ContactSection';
 
-const HomePage = () => {
-  const sections = useRef();
-
+const HomePage = ({ sections }) => {
   return (
-    <>
-      <Header sections={sections} />
-      <HomePageContainer ref={sections}>
-        <InitialSlider />
-        <BtnReturn />
-        <AboutSection />
-        <WhyUsSection />
-        <ServicesSection />
-        <CallSection />
-        <PortfolioSection />
-        <TeamSection />
-        <PricesSection />
-        <FaqContainer />
-        <ContactSection />
-        <Footer />
-        <Modal />
-      </HomePageContainer>
-    </>
+    <HomePageContainer ref={sections}>
+      <InitialSlider />
+      <AboutSection />
+      <WhyUsSection />
+      <ServicesSection />
+      <CallSection />
+      <PortfolioSection />
+      <TeamSection />
+      <PricesSection />
+      <FaqContainer />
+      <ContactSection />
+    </HomePageContainer>
   );
 };
 

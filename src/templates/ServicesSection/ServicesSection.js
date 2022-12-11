@@ -1,6 +1,6 @@
 import SectionContainer from './ServicesSection.styles';
-import Container from '../../../styles/Container';
-import Title from '../../../components/Title/Title';
+import Container from '../../styles/Container';
+import Title from '../../components/Title/Title';
 import ServicesCards from './ServicesCards/ServicesCards';
 
 const ServicesSection = () => {

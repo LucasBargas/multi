@@ -3,8 +3,8 @@ import * as S from './PortfolioSection.styles';
 import { BiLink } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai';
 import products from './products';
-import Title from '../../../components/Title/Title';
-import Container from '../../../styles/Container';
+import Title from '../../components/Title/Title';
+import Container from '../../styles/Container';
 
 const PortfolioSection = () => {
   const link = useRef();

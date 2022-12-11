@@ -1,11 +1,11 @@
 import * as S from './TeamSection.styles';
-import Container from '../../../styles/Container';
-import Title from '../../../components/Title/Title';
+import Container from '../../styles/Container';
+import Title from '../../components/Title/Title';
 import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import TeamMemberOne from '../../../assets/img/team/team-1.jpg';
-import TeamMemberTwo from '../../../assets/img/team/team-2.jpg';
-import TeamMemberThree from '../../../assets/img/team/team-3.jpg';
-import TeamMemberFour from '../../../assets/img/team/team-4.jpg';
+import TeamMemberOne from '../../assets/img/team/team-1.jpg';
+import TeamMemberTwo from '../../assets/img/team/team-2.jpg';
+import TeamMemberThree from '../../assets/img/team/team-3.jpg';
+import TeamMemberFour from '../../assets/img/team/team-4.jpg';
 
 const TeamSection = () => {
   return (
