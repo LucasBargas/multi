@@ -9,10 +9,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 const App = () => {
   const sections = useRef();
 
-  useEffect(() => {
-    console.log(sections.current);
-  }, []);
-
   return (
     <BrowserRouter>
       <Header sections={sections} />
