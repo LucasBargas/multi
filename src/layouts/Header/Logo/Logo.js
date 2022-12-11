@@ -1,9 +1,15 @@
+import { NavLink } from 'react-router-dom';
 import * as S from './Logo.styles';
 
 const Logo = () => {
   return (
     <S.Logo>
-      <a href="/">Multi</a>
+      <NavLink
+        to="/"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        Multi
+      </NavLink>
     </S.Logo>
   );
 };

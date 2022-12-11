@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage/HomePage';
 import Modal from './layouts/Modal/Modal';
 import Footer from './layouts/Footer/Footer';
 import BtnReturn from './layouts/ButtonReturn/ButtonReturn';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const sections = useRef();
@@ -13,13 +14,15 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <Header sections={sections} />
-      <HomePage sections={sections} />
+      <Routes>
+        <Route path="/" index element={<HomePage sections={sections} />} />
+      </Routes>
       <Footer />
       <Modal />
       <BtnReturn />
-    </>
+    </BrowserRouter>
   );
 };
 
