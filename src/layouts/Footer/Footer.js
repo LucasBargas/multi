@@ -119,7 +119,7 @@ const Footer = () => {
               Tamen quem nulla quae legam multos aute sint culpa legam noster
               magna
             </p>
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
               <input type="email" />
               <button>Subscribe</button>
             </form>
