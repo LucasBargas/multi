@@ -89,6 +89,6 @@ export const ListText = styled.div`
     overflow-y: hidden;
     visibility: hidden;
     height: 0;
-    transition: .5s;
+    transition: .3s;
   }
 `;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import * as S from './OrderedList.styles';
 import { FiChevronDown } from 'react-icons/fi';
 
