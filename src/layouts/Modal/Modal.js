@@ -26,7 +26,7 @@ const Modal = () => {
           <p>
             <strong>Nota:</strong> Este projeto é uma réplica desenvolvida por{' '}
             <a
-              href="https://projetoslucasbargas.com/"
+              href="https://projetoslucasbargas.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
