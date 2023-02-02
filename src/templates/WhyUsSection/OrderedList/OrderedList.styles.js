@@ -15,7 +15,7 @@ export const ListContainer = styled.ul`
         margin-top: .5rem;
         height: 60px;
         visibility: visible;
-        transition: .5s;
+        transition: .3s;
 
         @media (max-width: 480px) {
           height: 86px;
