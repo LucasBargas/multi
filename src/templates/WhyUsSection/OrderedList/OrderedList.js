@@ -4,19 +4,19 @@ import { FiChevronDown } from 'react-icons/fi';
 
 const listContent = [
   {
-    number: 1,
+    id: 1,
     question: 'Non consectetur a erat nam at lectus urna duis?',
     listText:
       'Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.',
   },
   {
-    number: 2,
+    id: 2,
     question: 'Feugiat scelerisque varius morbi enim nunc?',
     listText:
       'Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.',
   },
   {
-    number: 3,
+    id: 3,
     question: 'Dolor sit amet consectetur adipiscing elit?',
     listText:
       'Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.',
@@ -24,32 +24,27 @@ const listContent = [
 ];
 
 const OrderedList = () => {
-  const [listActive, setListActive] = useState(0);
-  const listItems = useRef();
+  const [listActive, setListActive] = useState([1]);
 
-  const handleListItems = () => Array.from(listItems.current.children);
+  const handleClick = (id) => {
+    if (listActive.includes(id)) {
+      setListActive(listActive.filter((listId) => listId !== id));
+      return;
+    }
 
-  useEffect(() => {
-    const listItemsArray = handleListItems();
-    listItemsArray.forEach((list) => list.classList.remove('active'));
-    listItemsArray[listActive].classList.add('active');
-  }, [listActive]);
-
-  useEffect(() => {
-    const listItemsArray = handleListItems();
-    const handleListLink = (index) => setListActive(index);
-    listItemsArray.forEach((list, index) =>
-      list.addEventListener('click', () => handleListLink(index)),
-    );
-  }, []);
+    setListActive([...listActive, id]);
+  };
 
   return (
-    <S.ListContainer ref={listItems}>
+    <S.ListContainer>
       {listContent.map((list) => (
-        <li key={list.number}>
-          <S.ListQuestion>
+        <li
+          key={list.id}
+          className={listActive.includes(list.id) ? 'active' : ''}
+        >
+          <S.ListQuestion onClick={() => handleClick(list.id)}>
             <div>
-              <span>{list.number > 9 ? list.number : `0${list.number}`}</span>
+              <span>0{list.id}</span>
               <span>{list.question}</span>
             </div>
             <FiChevronDown />
