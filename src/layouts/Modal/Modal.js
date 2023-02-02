@@ -37,7 +37,7 @@ const Modal = () => {
           </p>
 
           <S.LinkToGithub
-            href="https://github.com/LucasBargas/projetos_react_js/tree/main/multi"
+            href="https://github.com/LucasBargas/multi"
             target="_blank"
             rel="noopener noreferrer"
           >
